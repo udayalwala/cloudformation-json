@@ -1,0 +1,36 @@
+{
+"Parameters":
+{
+ "mykeypair":
+ {
+ "Description":"select the keypair from the list",
+ "Type":"AWS::EC2::KeyPair::KeyName"
+  }
+ 
+ },
+ "Resources":
+ {
+ "Myinstance":
+ {
+  "Type":"AWS::EC2::Instance",
+  "Properties":
+  {
+  "ImageId":"ami-0447a12f28fddb066",
+  "InstanceType":"t2.micro",
+  "KeyName":{"Ref":"mykeypair"}
+  }
+ }
+ },
+ "Outputs":
+ {
+ "instancepublicip":
+ {
+ "Value":{"Fn::GetAtt":["Myinstance","PublicIp"]}
+ },
+ "instanceprivateip":
+ {
+ "Value":{"Fn::GetAtt":["Myinstance","PrivateIp"]}
+ }
+}
+}
+

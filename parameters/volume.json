@@ -1,0 +1,27 @@
+{
+"Parameters":
+{
+"paramvol":
+{
+"Description":"enter the volume size",
+"Type":"String"
+},
+"Paramaz":
+{
+"Description":"enter the az ",
+"Type":"String"
+}
+},
+"Resources":
+{
+"myvolume":
+{
+"Type":"AWS::EC2::Volume",
+"Properties":
+{
+"Size":{"Ref":"paramvol"},
+"AvailabilityZone":{"Ref":"Paramaz"}
+}
+}
+}
+}

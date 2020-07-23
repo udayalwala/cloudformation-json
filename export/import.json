@@ -1,0 +1,15 @@
+{
+"Resources":
+{
+"myinstance":
+{
+"Type":"AWS::EC2::Instance",
+"Properties":
+{
+"ImageId":"ami-0447a12f28fddb066",
+"InstanceType":"t2.micro",
+"SubnetId":{"Fn::ImportValue":"pubsubnet"}
+}
+}
+}
+}

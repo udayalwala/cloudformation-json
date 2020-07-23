@@ -1,0 +1,23 @@
+to share the information or use the resources of ne stack in another stack we use the export function
+
+to import the stack in other stack or use the resources of the 1st stack by the second stack we use import function
+
+"outputs"
+{
+"logicalid"
+{
+"Description":"anything you can describe",
+"Value":"value to return",
+"Export":
+{
+"Name":"value to export"
+}
+}
+}
+
+Name: other stack will refer that name while importing
+
+
+to import it in another stack
+
+{"Fn::ImportValue":sharedvaluetoimport}

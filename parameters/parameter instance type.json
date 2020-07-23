@@ -1,0 +1,25 @@
+{
+"Parameters":
+{
+"instatypeparam":
+{
+"Description": "select the instance type",
+"Type":"String",
+"AllowedValues":
+["t2.small","t2.large","t2.micro"],
+"Default":"t2.micro"
+}
+},
+"Resources":
+{
+"myec2instance":
+{
+"Type":"AWS::EC2::Instance",
+"Properties":
+{
+"ImageId":"ami-0447a12f28fddb066",
+"InstanceType":{"Ref":"instatypeparam"}
+}
+}
+}
+}

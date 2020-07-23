@@ -1,0 +1,26 @@
+create a vpc
+10.0.0.0/24
+
+create two subnets
+
+public subnet: 10.0.0.0/25
+private subnet: 10.0.0.128/25
+
+create a routetable and attach the route-table to vpc the default entry in the routetable is vpc cidr
+
+
+create an internet gateway
+
+attach internet gateway to the vpc
+
+a subnet is said to be public subnet if the subnet routetable consist of the internet gateway
+ entry
+
+go to public routetable --> subnet association --> add public subnet
+
+go to public routetable --> edit routes --> add route -->
+
+dest ip: 0.0.0.0/0
+
+target internet gateway
+

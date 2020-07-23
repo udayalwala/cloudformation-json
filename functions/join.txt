@@ -1,0 +1,33 @@
+ Fn::Join
+
+appends a set of values into a single value, separated by the specified delimiter
+
+{ "Fn::Join" : [ "delimiter", [ comma-delimited list of values ] ] }
+
+userdata for the instance:
+===========================
+
+#! /bin/bash
+sudo apt-get update
+sudo apt-get install -y apache2
+
+
+if you want to use the above user data in cloudformation script
+==============================================================
+
+use "UserData" for entering the userdata
+
+use Fn::Join if you want to join multiple userdata instructions
+---------------------------------------------------------------------
+
+Fn::Join:["",["#! /bin/bash \n","apt-get update \n","sudo apt-get install"]] 
+
+if you want the userdata in encrypted
+-------------------------------------
+
+Fn::Base64
+
+{"Fn::Base64":{Fn::Join:["",["#! /bin/bash \n","apt-get update \n","sudo apt-get install"]]} 
+
+
+

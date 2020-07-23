@@ -1,0 +1,19 @@
+{
+"parameters":
+{
+},
+"Resources":
+{
+},
+"Mappings":
+{
+},
+"Conditions":
+{
+},
+"Outputs":
+{
+}
+}
+
+out of all these sections resource section is mandatory
